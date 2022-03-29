@@ -8,7 +8,18 @@ namespace MindboxTestTask
 {
     public class Circle : Figure
     {
-        public double Radius { get; private set; }
+        public double Radius {
+            get {
+                return Radius;
+            }
+
+            private set {
+                if (value > 0)
+                    Radius = value;
+                else
+                    throw new ArgumentException("Неверное значение радиуса окружности");
+            }
+        }
         public Circle(double radius)
         {
             Radius = radius;
