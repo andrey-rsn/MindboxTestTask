@@ -32,7 +32,6 @@ namespace MindboxTestTask
         
         public override double CalculateSquare()
         {
-
             Square = Math.Round(3.14 * Math.Pow(Radius,2),2);
             return Square;
         }

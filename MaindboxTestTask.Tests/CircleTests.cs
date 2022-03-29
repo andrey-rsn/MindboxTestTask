@@ -19,5 +19,29 @@ namespace MaindboxTestTask.Tests
 
             Assert.That(calcSquare, Is.EqualTo(expectedSquare));
         }
+
+        [Test]
+        [TestCase(0)]
+        [TestCase(-1)]
+        [TestCase(-100)]
+        public void Constructor_IncorrectData_ArgumentException (double radius)
+        {
+
+            Assert.That(() => { Circle circle = new Circle(radius); }, Throws.ArgumentException);
+        }
+
+        [Test]
+        [TestCase(1)]
+        [TestCase(20)]
+        [TestCase(100)]
+        
+        public void Constructor_CorrectData_CreatedInstance(double radius)
+        {
+            Circle circle = new Circle(radius);
+
+            var expectedRadius = radius;
+
+            Assert.That(circle.Radius, Is.EqualTo(expectedRadius));
+        }
     }
 }

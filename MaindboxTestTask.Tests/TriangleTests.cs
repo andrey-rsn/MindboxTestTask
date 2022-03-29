@@ -23,5 +23,31 @@ namespace MaindboxTestTask.Tests
 
             Assert.That(CalculatedSquare, Is.EqualTo(expectedSquare));
         }
+
+        [Test]
+        [TestCase(0,1,2)]
+        [TestCase(1, 2, 3)]
+        [TestCase(-1, -2, 3)]
+        public void Constructor_IncorrectData_ArgumentException(double a, double b, double c)
+        {
+            Assert.That(() => { Triangle triangle = new Triangle(a, b, c); },Throws.ArgumentException);
+        }
+
+        [Test]
+        [TestCase(2, 3, 4)]
+        [TestCase(4, 6, 7)]
+        [TestCase(7, 8, 9)]
+        public void Constructor_CorrectData_CreatedInstance(double a, double b, double c)
+        {
+            Triangle triangle=new Triangle(a, b, c);
+
+            var expectedA = a;
+            var expectedB = b; 
+            var expectedC = c;
+
+            Assert.That(triangle.A,Is.EqualTo(expectedA));
+            Assert.That(triangle.B, Is.EqualTo(expectedB));
+            Assert.That(triangle.C, Is.EqualTo(expectedC));
+        }
     }
 }
