@@ -8,18 +8,23 @@ namespace MindboxTestTask
 {
     public class Circle : Figure
     {
-        public double Radius {
-            get {
-                return Radius;
-            }
+        private double radius;
 
-            private set {
+        public double Radius 
+        {
+            get
+            {
+                return this.radius;
+            }
+        
+            private set
+            {
                 if (value > 0)
-                    Radius = value;
+                    this.radius = value;
                 else
                     throw new ArgumentException("Неверное значение радиуса окружности");
             }
-        }
+        } 
         public Circle(double radius)
         {
             Radius = radius;
@@ -27,7 +32,8 @@ namespace MindboxTestTask
         
         public override double CalculateSquare()
         {
-            Square = Math.PI * Math.Pow(Radius,2);
+
+            Square = Math.Round(3.14 * Math.Pow(Radius,2),2);
             return Square;
         }
     }

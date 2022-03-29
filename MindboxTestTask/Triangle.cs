@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 
 namespace MindboxTestTask
 {
-    internal class Triangle : Figure
+    public class Triangle : Figure
     {
+        private double a;
+        private double b;
+        private double c;
         public double A 
         {
             get {
-                return A;
+                return this.a;
             }
             private set {
                 if (value > 0)
-                    A = value;
+                    this.a = value;
                 else
                     throw new ArgumentException("Неверное значение стороны треугольника");
             }
@@ -25,12 +28,12 @@ namespace MindboxTestTask
         {
             get
             {
-                return B;
+                return this.b;
             }
             private set
             {
                 if (value > 0)
-                    B = value;
+                    this.b = value;
                 else
                     throw new ArgumentException("Неверное значение стороны треугольника");
             }
@@ -40,12 +43,12 @@ namespace MindboxTestTask
         {
             get
             {
-                return C;
+                return this.c;
             }
             private set
             {
                 if (value > 0)
-                    C = value;
+                    this.c = value;
                 else
                     throw new ArgumentException("Неверное значение стороны треугольника");
             }
@@ -65,7 +68,7 @@ namespace MindboxTestTask
         {
             var p = (A + B + C) / 2;
 
-            Square=Math.Sqrt(p*(p-A)*(p-B)*(p-C));
+            Square=Math.Round(Math.Sqrt(p*(p-A)*(p-B)*(p-C)),2);
 
             return Square;
         }
