@@ -5,7 +5,12 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MindboxTestTask", "MindboxTestTask\MindboxTestTask.csproj", "{890EADF8-DC48-4397-A940-13060B1F3D91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaindboxTestTask.Tests", "MaindboxTestTask.Tests\MaindboxTestTask.Tests.csproj", "{105A333C-B389-43B4-87E3-8916E3254281}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaindboxTestTask.Tests", "MaindboxTestTask.Tests\MaindboxTestTask.Tests.csproj", "{105A333C-B389-43B4-87E3-8916E3254281}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task2", "Task2", "{D73BE7A1-31C2-4322-A2EE-E56E75777802}"
+	ProjectSection(SolutionItems) = preProject
+		Task2.sql = Task2.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
